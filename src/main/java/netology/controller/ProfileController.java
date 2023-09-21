@@ -1,12 +1,10 @@
-package ru.netology.springbootdemo.controller;
+package netology.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.netology.springbootdemo.systemProfile.SystemProfile;
+import netology.systemProfile.SystemProfile;
 
 @RestController
-@RequestMapping("/")
 public class ProfileController {
     private SystemProfile profile;
 
@@ -14,7 +12,7 @@ public class ProfileController {
         this.profile = profile;
     }
 
-    @GetMapping("profile")
+    @GetMapping("/")
     public String getProfile() {
         return profile.getProfile();
     }
